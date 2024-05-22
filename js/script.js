@@ -6,29 +6,40 @@ btn.addEventListener('click',()=>{
     nav.classList.toggle('flex')
     nav.classList.toggle('hidden')
 })
-document.addEventListener('DOMContentLoaded', (event) => {
-    const container = document.getElementById('testimonials');
-    const progressBar = document.getElementById('progress-bar');
-    const circles = progressBar.querySelectorAll('div');
-
-    function updateProgress() {
-        const containerWidth = container.scrollWidth - container.clientWidth;
-        const scrollLeft = container.scrollLeft;
-        const scrollFraction = scrollLeft / containerWidth;
-
-        const activeIndex = Math.round(scrollFraction * (circles.length - 1));
-
-        circles.forEach((circle, index) => {
-            if (index === activeIndex) {
-                circle.classList.add('bg-BrightRed');
-                circle.classList.remove('bg-gray-300');
-            } else {
-                circle.classList.add('bg-gray-300');
-                circle.classList.remove('bg-BrightRed');
-            }
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    const testimonials = document.querySelectorAll('#testimonial');
+    const progressBarItems = document.querySelectorAll('#progress-bar div');
+  
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.style.display = i === index? 'block' : 'none';
+      });
+      progressBarItems.forEach((item, i) => {
+        item.classList.toggle('bg-gray-300', i!== index);
+        item.classList.toggle('bg-BrightRed', i === index);
+      });
     }
-
-    container.addEventListener('scroll', updateProgress);
-    updateProgress();
-});
+  
+    function handleProgressClick(event) {
+      const index = parseInt(event.target.getAttribute('data-index'));
+      if (!isNaN(index)) {
+        // Return the new index instead of updating a global variable
+        return index;
+      }
+      return null;
+    }
+  
+    // Modify the forEach loop to pass the returned index to showTestimonial
+    progressBarItems.forEach(item => {
+      item.addEventListener('click', (event) => {
+        const newIndex = handleProgressClick(event);
+        if (newIndex!== null) {
+          showTestimonial(newIndex);
+        }
+      });
+    });
+  
+    // Show the first testimonial initially
+    showTestimonial(0);
+  });
+  
