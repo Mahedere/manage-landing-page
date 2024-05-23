@@ -10,6 +10,7 @@ This is a solution to the [Manage landing page challenge on Frontend Mentor](htt
 - [What I learned](#what-i-learned)
 - [Author](#author)
 ## Overview
+The Manage landing page challenge on Frontend Mentor showcases their adeptness with Tailwind CSS and responsive design principles. Through this project, I refined my skills in handling various screen sizes and implementing interactive features like testimonials sliders. My use of JavaScript demonstrates a deep understanding of DOM manipulation and event handling. Overall, My solution reflects my commitment to mastering frontend development techniques and delivering polished user experiences.
 ### The challenge
 
 Users should be able to:
@@ -38,5 +39,5 @@ In completing this project, I gained valuable experience with Tailwind CSS and h
 
 ## Author
 - Website - Mahedere Tebebe [https://portfolio-two-beta-24.vercel.app/]
-- Frontend Mentor - [@yhttps://www.frontendmentor.io/profile/Mahedere]
+- Frontend Mentor - [https://www.frontendmentor.io/profile/Mahedere]
 - Linkedin - [https://www.linkedin.com/in/mahedere-tebebe/]
