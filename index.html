@@ -229,14 +229,16 @@
     </div>
 </div>
 <div class="flex flex-col justify-between">
-    <form >
+    <form id="form">
         <div class="flex space-x-3">
-            <input type="text" class="flex-1 px-4 rounded-full focus:outline-none h-8 hover:bg-DarkGrayishBlue" placeholder="updated in your inbox" />
-            <button class="px-6 py-2 text-white rounded-full bg-BrightRed hover:bg-DarkGrayishBlue focus:outline-none">
+            <input type="text" id="emailInput" class="flex-1 px-4 rounded-full focus:outline-none h-8 hover:bg-DarkGrayishBlue" placeholder="updated in your inbox" />
+            <button id="button" class="px-6 py-2 text-white rounded-full bg-BrightRed hover:bg-DarkGrayishBlue focus:outline-none">
                 Go
             </button>
         </div>
+        <div id="validationMessageContainer" class="text-red-500 mt-2"></div>
     </form>
+
     <div class="hidden text-white md:block">
         Copyright 2020. All Rights Reserved
     </div>

@@ -23,13 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleProgressClick(event) {
       const index = parseInt(event.target.getAttribute('data-index'));
       if (!isNaN(index)) {
-        // Return the new index instead of updating a global variable
         return index;
       }
       return null;
     }
-  
-    // Modify the forEach loop to pass the returned index to showTestimonial
     progressBarItems.forEach(item => {
       item.addEventListener('click', (event) => {
         const newIndex = handleProgressClick(event);
@@ -38,8 +35,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     });
-  
-    // Show the first testimonial initially
     showTestimonial(0);
   });
   
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form');
+    const inputField = document.getElementById('emailInput');
+    const validationMessageContainer = document.getElementById('validationMessageContainer');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (inputField.value.trim() === '') {
+            validationMessageContainer.textContent = 'The input field cannot be empty.';
+            return false;
+        }
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(inputField.value)) {
+            validationMessageContainer.textContent = 'Please enter a valid email address.';
+            return false;
+        } else {
+            validationMessageContainer.textContent = ''; 
+        }
+        console.log('Form submitted successfully!');
+    });
+});
