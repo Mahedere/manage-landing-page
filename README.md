@@ -38,6 +38,6 @@ Users should be able to:
 In completing this project, I gained valuable experience with Tailwind CSS and honed my skills in managing responsive layouts across various screen sizes. One particular challenge I tackled was efficiently displaying testimonials and updating the progress bar based on user interaction. Through this, I deepened my understanding of event handling and DOM manipulation in JavaScript.
 
 ## Author
-- Website - Mahedere Tebebe [https://portfolio-two-beta-24.vercel.app/]
+- Website - Mahedere Tebebe [https://mahedere-tebebe.vercel.app/]
 - Frontend Mentor - [https://www.frontendmentor.io/profile/Mahedere]
 - Linkedin - [https://www.linkedin.com/in/mahedere-tebebe/]
